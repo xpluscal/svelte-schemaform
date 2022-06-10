@@ -18,6 +18,8 @@ Rewrite / Svelte port of [react-jsonschema-form](https://github.com/rjsf-team/re
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+![Preview of Svelte SchemaForm](https://xpluscal.github.io/svelte-schemaform/images/preview.jpg)
+
 ## Why
 Building and maintaining tons of forms is a mess and error-prone. Having a schema/json based approach to generating forms speeds up that process tremendously.
 
