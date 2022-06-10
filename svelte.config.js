@@ -19,7 +19,7 @@ const config = {
 	    fallback: null
 	  }),
 		paths: {
-      assets: '',
+      assets: '/svelte-schemaform',
       base: '/svelte-schemaform'
     },
 		prerender: {
