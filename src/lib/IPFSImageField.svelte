@@ -1,0 +1,118 @@
+<script>
+	import IoIosCloudUpload from 'svelte-icons/io/IoIosCloudUpload.svelte'
+	import Button from '$lib/components/Button.svelte';
+	import Input from '$lib/components/Input.svelte';
+	import { onMount, getContext } from 'svelte';
+	import {variables} from '$lib/variables'
+	import FormData from 'form-data';
+	import {pinata} from '$lib/stores'
+	import fs from 'fs';
+	import axios from 'axios';
+
+	let avatar = "";
+	let fileinput;
+	let image;
+	let form;
+  export let key, value, update, config;
+	let inputStyle = "w-full px-2 py-1 border-2 border-slate-200 dark:border-slate-500 text-slate-600 dark:text-white bg-white dark:bg-slate-600 rounded-lg"
+
+	const pdk = getContext('pdk');
+
+	const onFileSelected =(e)=>{
+    image = e.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(image);
+    reader.onload = e => {
+      avatar = e.target.result;
+			update(key,avatar);
+    };
+  }
+
+	const publishToIPFS = async (e) => {
+		console.log("publish");
+		console.log(e);
+		// TODO
+		try {
+			if(image !== undefined) {
+				let _ipfsData = await pinFileToIPFS(image, variables.pinataKey,variables.pinataSecret);
+				console.log(_ipfsData);
+				if(_ipfsData.data && _ipfsData.data.IpfsHash){
+					update(key,"ipfs://"+_ipfsData.data.IpfsHash);
+					avatar = $pdk.utils.convertIPFSUri("ipfs://"+_ipfsData.data.IpfsHash);
+				}
+			}
+		} catch (e) {
+			console.error(e);
+		}
+	}
+
+	const handleManualChange = (e) => {
+		update(key,value);
+	}
+
+	// TODO
+	export const pinFileToIPFS = async (file, pinataApiKey, pinataSecretApiKey) => {
+    const url = `https://api.pinata.cloud/pinning/pinFileToIPFS`;
+
+		let data = new FormData();
+		data.append('file', image);
+
+		return axios
+      .post(url, data, {
+          maxBodyLength: 'Infinity', //this is needed to prevent axios from erroring out with large files
+          headers: {
+              'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
+              pinata_api_key: pinataApiKey,
+              pinata_secret_api_key: pinataSecretApiKey
+          }
+      })
+	};
+
+	const loadImage = () => {
+		console.log("LOADING????");
+		avatar = $pdk.utils.convertIPFSUri(value);
+		console.log(avatar);
+	}
+
+	onMount(async () => {
+		console.log($pdk.utils);
+		avatar = await $pdk.utils.convertIPFSUri(value);
+	});
+
+	$: a = avatar;
+	$: console.log(a);
+
+</script>
+
+<div class="flex">
+	{#if a}
+	<div on:click={()=>{fileinput.click();}} class="w-48 h-48 image-box flex flex-col items-center justify-center bg-slate-300 dark:bg-slate-700 rounded-lg cursor-pointer overflow-hidden">
+		{#if a.includes("ipfs")}
+			<iframe src={a} class="w-full h-full"></iframe>
+		{:else}
+			<img class="avatar" src={a} alt="d" />
+		{/if}
+	</div>
+	{:else}
+	<div on:click={()=>{fileinput.click();}} class="w-48 h-48 image-box flex flex-col items-center justify-center bg-slate-300 dark:bg-slate-700 p-6 rounded-lg cursor-pointer">
+	  <div class="w-8 h-8">
+	    <IoIosCloudUpload/>
+	  </div>
+	  Upload Image
+	</div>
+	{/if}
+	<div class="actions ml-4">
+		<div class="flex items-start">
+			<div class="mr-2">
+				<Button variant="outlined" on:click={()=>{fileinput.click();}}>Upload New Image</Button>
+			</div>
+			<Button variant="outlined" on:click={publishToIPFS}>Publish To IPFS</Button>
+		</div>
+		<div class="mt-4">
+			<form class="flex" on:submit|preventDefault={loadImage}>
+				<input on:input={(e) => update(key,e.target.value)} class={inputStyle} type="text" value={value}/>
+			</form>
+		</div>
+	</div>
+</div>
+<input style="display:none" formenctype="multipart/form-data" type="file" accept=".jpg, .jpeg, .png, .mp4, .gif, .webp" on:change={(e)=>onFileSelected(e)} bind:this={fileinput} >
