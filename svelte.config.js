@@ -16,10 +16,10 @@ const config = {
 			trailingSlash: 'always',
 	    pages: 'build',
 	    assets: 'build',
-	    fallback: null
+	    fallback: null,
 	  }),
+		appDir: 'internal',
 		paths: {
-      assets: '/svelte-schemaform',
       base: '/svelte-schemaform'
     },
 		prerender: {
