@@ -13,10 +13,15 @@ const config = {
 
 	kit: {
 		adapter: adapter({
+			trailingSlash: 'always',
 	    pages: 'build',
 	    assets: 'build',
 	    fallback: null
 	  }),
+		paths: {
+      assets: '',
+      base: '/svelte-schemaform'
+    },
 		prerender: {
 			default: true
 		}
