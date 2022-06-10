@@ -10,7 +10,7 @@ npm install --
 
 ## Basic Example
 
-```
+```svelte
 <script>
   import SchemaForm from 'svelte-schemaform'
 
