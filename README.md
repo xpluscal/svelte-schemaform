@@ -99,7 +99,7 @@ For more complex examples check the `/routes/index.svelte` file.
 | `formData`  | Data Object to be handled  | `{title: ""}`
 | `onSubmit`  | Callback function to be called when form is submitted.  | `onSubmit={(data) => doData(data)}`
 | `onChange`  | Callback function to be called when form data changes.  | `onChange={(data) => handleChange(data)}`
-| `layout`  | Display fields top to bottom (parameter not present) or as a 3 column grid.  | `undefined|"grid"`
+| `layout`  | Display fields top to bottom (parameter not present) or as a 3 column grid.  | `undefined` or `grid`
 
 
 ## Additional Features
