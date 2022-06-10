@@ -34,7 +34,7 @@ If you rely on Svelte SchemaForm, please consider supporting it.
 ## Installation
 
 ```
-npm i svelte-schemaform
+npm add svelte-schemaform
 ```
 
 ## Basic Usage
