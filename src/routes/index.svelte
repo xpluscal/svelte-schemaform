@@ -1,4 +1,5 @@
 <script type="text/javascript">
+  import SvelteSeo from "svelte-seo";
   import SchemaForm from '$lib/SchemaForm.svelte'
 
   let schema = {

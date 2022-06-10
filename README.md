@@ -1,6 +1,6 @@
 # Svelte Schemaform
-A simple, automatic form builder for svelte using arbitrary form data from a specified schema.
-Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonschema-form]
+A simple Svelte component capable of building HTML forms out of a JSON schema
+Rewrite / Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonschema-form]
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -18,6 +18,9 @@ Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonsc
 
 ## Why
 Building and maintaining tons of forms is a mess and error-prone. Having a schema/json based approach to generating forms speeds up that process tremendously.
+
+## Demo
+(Visit Demo)[https://xpluscal.github.io/svelte-schemaform/]
 
 **Sponsor Svelte SchemaForm**
 
@@ -71,7 +74,8 @@ npm i svelte-schemaform
   onChange={handleChange}
 />
 ```
-
+## Advanced Usage
+SchemaForm supports segmenting and a few other non-documented features.
 For more complex examples check the `/routes/index.svelte` file.
 
 ## Supported Field Types (schema slug)
