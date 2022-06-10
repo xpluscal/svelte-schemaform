@@ -41,7 +41,7 @@ npm add svelte-schemaform
 
 ```svelte
 <script>
-  import SchemaForm from 'svelte-schemaform'
+  import {SchemaForm} from 'svelte-schemaform'
 
   let schema = {
     "title": {

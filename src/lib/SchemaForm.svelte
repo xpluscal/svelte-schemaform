@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "./app.css";
+  import "./index.css";
   import {onMount} from 'svelte'
   import dayjs from 'dayjs';
   import utc from 'dayjs/plugin/utc.js'
