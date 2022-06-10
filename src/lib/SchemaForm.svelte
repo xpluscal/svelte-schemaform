@@ -20,7 +20,9 @@
 
   const update = (key,value) => {
     formData[key] = value;
-    onChange(formData);
+    if (onChange !== undefined) {
+      onChange(formData);
+    }
   }
 
   const submit = () => {

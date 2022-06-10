@@ -5,7 +5,6 @@
   import ObjectField from '$lib/ObjectField.svelte';
   import FormGroup from '$lib/FormGroup.svelte';
   // import IPFSImageField from '$lib/IPFSImageField.svelte'; --TODO
-  import Toggle from "svelte-toggle";
   // import {HsvPicker} from 'svelte-color-picker'; --TODO
   import {convertISODateToInputTZ, rgbToHex} from '$lib/helpers'
   import dayjs from 'dayjs';
@@ -49,7 +48,7 @@
     <!-- {:else if type === "color"}
       <HsvPicker on:colorChange={(rgba) => update(key, $pdk.utils.rgbToHex(rgba.detail.r,rgba.detail.g,rgba.detail.b))} startColor={(value === "") ? '#FFFFFF' : value}/> -->
     {:else if type === "checkbox"}
-      <Toggle on:toggle={(e) => update(key,e.detail)} hideLabel bind:toggled={value} switchColor="#eee" toggledColor="#00ce00" untoggledColor="#ccc" />
+      <input class="m-2" on:click={() => update(key, !value)} type=checkbox checked={value}>
     {:else if type === "date"}
       <input class={inputStyle} on:input={(e) => update(key,dayjs(e.target.value).tz($userTimezone).unix())} type="datetime-local" id="meeting-time"
          name="meeting-time" value={convertISODateToInputTZ(dayjs.unix(parseInt(value)))}>

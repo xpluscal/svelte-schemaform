@@ -14,6 +14,10 @@
       "type": "textarea",
       "section": [0]
     },
+    "checkbox": {
+      "label" : "Checkbox",
+      "type" : "checkbox"
+    },
     "list": {
       "label" : "List",
       "type": "array",
@@ -41,6 +45,7 @@
   let formData = {
     title: "",
     description: "",
+    checkbox: false,
     list: ["Item A", "Item B"],
     object: {
       age: 0,
@@ -84,6 +89,7 @@
         {schema}
         {formData}
         onSubmit={(data) => alert(JSON.stringify(data))}
+        onChange={(data) => console.log("changed")}
       />
     </div>
 
