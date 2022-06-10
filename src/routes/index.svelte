@@ -64,11 +64,11 @@
   openGraph={{
     title: "Svelte SchemaForm - Automatic Form Builder for Svelte",
     description: "Build forms in svelte directly from JSON schema using a simple Svelte component.",
-    url: $page.url.href,
+    url: "https://xpluscal.github.io/svelte-schemaform",
     type: 'website',
     images: [
       {
-        url: $page.url.origin+"/images/seo-image.jpg",
+        url: "https://xpluscal.github.io/svelte-schemaform/images/seo-image.jpg",
         width: 1200,
         height: 630,
         alt: "Svelte SchemaForm - Automatic Form Builder for Svelte"
