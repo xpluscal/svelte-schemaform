@@ -34,6 +34,7 @@
 	"dependencies": {
 		"dayjs": "^1.11.3",
 		"svelte-icons": "^2.1.0",
+		"svelte-seo": "^1.4.1",
 		"svelte2tsx": "^0.5.10"
 	}
 }

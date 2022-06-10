@@ -18,10 +18,10 @@ const config = {
 	    assets: 'build',
 	    fallback: null,
 	  }),
-		appDir: 'internal',
 		paths: {
       base: '/svelte-schemaform'
     },
+		appDir: 'internal',
 		prerender: {
 			default: true
 		}

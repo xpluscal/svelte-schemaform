@@ -5,6 +5,12 @@ Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonsc
 ## Why
 Building and maintaining tons of forms is a mess and error-prone. Having a schema/json based approach to generating forms speeds up that process tremendously.
 
+**Sponsor Svelte SEO**
+
+If you rely on Svelte SchemaForm, please consider supporting it.
+
+<a href="https://www.buymeacoffee.com/xpluscal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Installation
 
 ```
