@@ -6,6 +6,7 @@
   export let value;
   export let key;
   export let update;
+  export let schema;
 
   const add = () => {
     temp_value = [...temp_value,""];
@@ -30,12 +31,12 @@
   {#each temp_value as value, index}
   <div class="flex items-center">
     <div class="grow">
-      <SchemaField update={(k,v) => update_array(k,v,index)} {value}/>
+      <SchemaField {schema} update={(k,v) => update_array(k,v,index)} {value}/>
     </div>
     <button on:click={() => remove(index)}><span class="ml-2 w-6 h-6 text-red-400 block -mt-4"><IoIosRemoveCircle/></span></button>
   </div>
   {:else}
     No Values
   {/each}
-  <Button on:click={add}>Add</Button>
+  <Button on:click={add}>Add Entry</Button>
 </div>

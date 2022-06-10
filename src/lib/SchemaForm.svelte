@@ -44,7 +44,7 @@
   {:else}
     No Data
   {/each}
-  <div class="">
+  <div class="w-full flex items-end justify-end">
     <Button on:click={submit}>Submit</Button>
   </div>
 </div>

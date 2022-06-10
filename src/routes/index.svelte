@@ -8,15 +8,26 @@
       "section": [0]
     },
     "description": {
-      "label" : "description",
+      "label" : "Description",
       "type": "textarea",
       "section": [0]
+    },
+    "list": {
+      "label" : "List",
+      "type": "array",
+      "section": [0]
+    },
+    "object": {
+      "label" : "Object",
+      "type" : "object",
+      "layout": "grid",
     }
   }
 
   let formData = {
     title: "",
-    description: ""
+    description: "",
+    list: ["Item A", "Item B"]
   }
 
 </script>

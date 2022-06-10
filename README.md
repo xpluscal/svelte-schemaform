@@ -2,6 +2,9 @@
 Automatically create and update a form for arbitrary form data from a specified schema.
 A simple Svelte variant of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonschema-form]
 
+## Why
+Building and maintaining tons of forms is a mess and error-prone. Having a schema/json based approach to generating forms speeds up that process tremendously.
+
 ## Installation
 
 ```
@@ -21,7 +24,7 @@ npm install --
       "section": [0]
     },
     "description": {
-      "label" : "description",
+      "label" : "Description",
       "type": "textarea",
       "section": [0]
     }
@@ -71,3 +74,6 @@ npm install --
 
 - [ ] Form Validation
 - [ ] Custom Styling
+
+## Contribution
+Feel free to suggest / PR. This grows best together.

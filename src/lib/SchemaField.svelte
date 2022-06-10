@@ -3,7 +3,7 @@
   import ArrayField from '$lib/ArrayField.svelte';
   import ObjectArrayField from '$lib/ObjectArrayField.svelte';
   import ObjectField from '$lib/ObjectField.svelte';
-  import TokenItemInput from '$lib/TokenItemInput.svelte';
+  import FormGroup from '$lib/FormGroup.svelte';
   // import IPFSImageField from '$lib/IPFSImageField.svelte'; --TODO
   import Toggle from "svelte-toggle";
   // import {HsvPicker} from 'svelte-color-picker'; --TODO
@@ -35,7 +35,7 @@
 </script>
 
 <div class="mb-4">
-  <TokenItemInput {label} {isGroup}>
+  <FormGroup {label} {isGroup}>
     {#if type === undefined}
       <input on:input={(e) => update(key,e.target.value)} class={inputStyle} type="text" value={value}/>
     {:else if type === "text"}
@@ -56,11 +56,11 @@
     <!-- {:else if type === "ipfs_upload"}
       <IPFSImageField {update} {key} {value} {config}/> -->
     {:else if type === "array"}
-      <ArrayField {update} {key} value={value}/>
+      <ArrayField {schema} {update} {key} {value}/>
     {:else if type === "object_array"}
-      <ObjectArrayField {update} {key} value={value}/>
+      <ObjectArrayField {schema} {update} {key} {value}/>
     {:else if type === "object"}
-      <ObjectField {update} {key} {layout} value={value}/>
+      <ObjectField {schema} {update} {key} {layout} {value}/>
     {/if}
-  </TokenItemInput>
+  </FormGroup>
 </div>

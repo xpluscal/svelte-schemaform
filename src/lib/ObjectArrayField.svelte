@@ -6,6 +6,7 @@
   export let value;
   export let key;
   export let update;
+  export let schema;
 
   const add = () => {
     temp_value = [...temp_value,{trait_type: "", value: ""}];
@@ -31,7 +32,7 @@
     <div class="grow flex justify-stretch items-center">
       {#each Object.entries(value) as [k,v]}
       <div class="grow mr-2">
-        <SchemaField update={(k,v) => update_object(k,v,index)} key={k} value={v}/>
+        <SchemaField {schema} update={(k,v) => update_object(k,v,index)} key={k} value={v}/>
       </div>
       {/each}
     </div>
