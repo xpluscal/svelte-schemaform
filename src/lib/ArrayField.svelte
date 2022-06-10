@@ -1,7 +1,7 @@
 <script>
-  import SchemaField from '$lib/components/form/SchemaField.svelte';
+  import SchemaField from '$lib/SchemaField.svelte';
   import IoIosRemoveCircle from 'svelte-icons/io/IoIosRemoveCircle.svelte'
-  import Button from '$lib/components/Button.svelte';
+  import Button from '$lib/Button.svelte';
 
   export let value;
   export let key;

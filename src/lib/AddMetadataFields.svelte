@@ -1,5 +1,5 @@
 <script>
-  import Button from '$lib/components/Button.svelte';
+  import Button from '$lib/Button.svelte';
   import {convertArrayToObject} from '$lib/helpers';
   export let ipfsMetadata,schema, update;
 

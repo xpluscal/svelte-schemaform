@@ -1,0 +1,218 @@
+{
+  "animation_url": {
+    "label" : "Animation URL",
+    "type": "ipfs_upload",
+    "section": [0],
+    "position": 2
+  },
+  "attributes": {
+    "label" : "Attributes",
+    "type": "object_array",
+    "section": [0],
+    "position": 3,
+    "default": {"trait_type":"","value":""}
+  },
+  "baseUri": {
+    "label" : "Base URI",
+    "type": "text"
+  },
+  "baseURI": {
+    "label" : "Base URI",
+    "type": "text"
+  },
+  "backgroundColor": {
+    "label" : "Background Color",
+    "type": "color",
+    "section": [1,3],
+    "position": 0,
+    "default": "#FFFFFF"
+  },
+  "classes": {
+    "label": "Custom CSS Class",
+    "type": "text",
+    "section": [3],
+    "description": "Comma separated classes."
+  },
+  "contractAddress" : {
+    "label" : "Contract Address",
+    "type": "text",
+    "required": true
+  },
+  "defaultAdmin" : {
+    "label" : "Default Admin",
+    "type": "text",
+    "required": true
+  },
+  "description" : {
+    "label" : "Description",
+    "type": "textarea",
+    "section": [0,3],
+    "position": 1,
+    "required": true
+  },
+  "endTime": {
+    "label": "Mint End Date",
+    "type": "date",
+    "required": true
+  },
+  "features": {
+    "label" : "Features",
+    "type": "array",
+    "section": [1,3],
+    "position": 2
+  },
+  "image" : {
+    "label" : "Image",
+    "type": "ipfs_upload",
+    "section": [0,3],
+    "position": 1
+  },
+  "isActive": {
+    "type": "checkbox",
+    "required": true
+  },
+  "isRedeemable": {
+    "type": "checkbox",
+    "required": true
+  },
+  "maxQuantityMappedByWhitelistHoldings": {
+    "type": "checkbox",
+    "section": [-1],
+    "required": true
+  },
+  "maxMintPerTxn": {
+    "type": "number",
+    "section": [-1],
+    "required": true
+  },
+  "maxPerWallet": {
+    "type": "number",
+    "section": [-1],
+    "required": true
+  },
+  "maxPerTxn": {
+    "type": "number",
+    "section": [-1],
+    "required": true
+  },
+  "maxSupply": {
+    "type": "number",
+    "section": [-1],
+    "required": true
+  },
+  "mintPrice": {
+    "label" : "Mint Price (ETH)",
+    "type": "price",
+    "section": [-1],
+    "required": true
+  },
+  "mintConfig": {
+    "label" : "Mint Configuration",
+    "type": "object",
+    "layout": "grid",
+    "required": true
+  },
+  "name" : {
+    "label" : "Name",
+    "type": "text",
+    "section": [0,3],
+    "position": 0,
+    "required": true
+  },
+  "on": {
+    "label" : "On",
+    "type": "checkbox"
+  },
+  "price": {
+    "label" : "Mint Price (ETH)",
+    "type": "price",
+    "section": [-1]
+  },
+  "requireAllWhitelists": {
+    "type": "checkbox",
+    "section": [-1],
+    "required": true
+  },
+  "receivingWallet": {
+    "label": "Fund Receiving Address",
+    "type": "text",
+    "required": true
+  },
+  "redeemEnd": {
+    "label": "Redeem End Date",
+    "type": "date",
+    "required": true
+  },
+  "redeemStart": {
+    "label": "Redeem Start Date",
+    "type": "date",
+    "required": true
+  },
+  "supply": {
+    "label" : "Mint Supply",
+    "type": "number"
+  },
+  "subtitle": {
+    "label" : "Subtitle",
+    "type": "text",
+    "section": [0,3],
+    "position": 1
+  },
+  "startTime": {
+    "label": "Mint Start Date",
+    "type": "date",
+    "required": true
+  },
+  "symbol": {
+    "label": "Symbol",
+    "type": "text",
+    "required": true
+  },
+  "textColor": {
+    "label" : "Text Color",
+    "type": "color",
+    "section": [1,3],
+    "position": 1,
+    "default": "#000000"
+  },
+  "tokenConfig": {
+    "label" : "Token Configuration",
+    "type": "object",
+    "required": true
+  },
+  "tokensToIssueOnRedeem": {
+    "label" : "Token IDs to issue on redeem",
+    "type": "array",
+    "required": true
+  },
+
+  "trait_type": {
+    "label" : "Trait Type",
+    "type" : "text",
+    "section": [-1]
+  },
+  "value": {
+    "label" : "Value",
+    "type" : "text",
+    "section": [-1]
+  },
+  "website_description" : {
+    "label" : "Website Description",
+    "type": "textarea",
+    "section": [0],
+    "position": 1,
+    "required": false
+  },
+  "windowOpens": {
+    "label": "Sale Open Date",
+    "type": "date",
+    "section": [-1],
+    "required": true
+  },
+  "windowCloses": {
+    "label": "Sale Close Date",
+    "type": "date",
+    "section": [-1],
+    "required": true
+  }
+}

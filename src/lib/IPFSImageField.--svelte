@@ -1,7 +1,7 @@
 <script>
 	import IoIosCloudUpload from 'svelte-icons/io/IoIosCloudUpload.svelte'
-	import Button from '$lib/components/Button.svelte';
-	import Input from '$lib/components/Input.svelte';
+	import Button from '$lib/Button.svelte';
+	import Input from '$lib/Input.svelte';
 	import { onMount, getContext } from 'svelte';
 	import {variables} from '$lib/variables'
 	import FormData from 'form-data';
