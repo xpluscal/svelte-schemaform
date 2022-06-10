@@ -1,4 +1,4 @@
-# Svelte Schemaform
+# Svelte SchemaForm
 A simple Svelte component capable of building HTML forms out of a JSON schema
 Rewrite / Svelte port of [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
 
@@ -46,13 +46,11 @@ npm add svelte-schemaform
   let schema = {
     "title": {
       "label" : "Title",
-      "type": "text",
-      "section": [0]
+      "type": "text"
     },
     "description": {
       "label" : "Description",
-      "type": "textarea",
-      "section": [0]
+      "type": "textarea"
     }
   }
 
@@ -77,6 +75,7 @@ npm add svelte-schemaform
   onChange={handleChange}
 />
 ```
+
 ## Advanced Usage
 SchemaForm supports segmenting and a few other non-documented features.
 For more complex examples check the `/routes/index.svelte` file.
@@ -98,6 +97,8 @@ For more complex examples check the `/routes/index.svelte` file.
 | `formData`  | Data Object to be handled  | `{title: ""}`
 | `onSubmit`  | Callback function to be called when form is submitted.  | `onSubmit={(data) => doData(data)}`
 | `onChange`  | Callback function to be called when form data changes.  | `onChange={(data) => handleChange(data)}`
+| `layout`  | Display fields top to bottom (parameter not present) or as a 3 column grid.  | `undefined|"grid"`
+
 
 ## Additional Features
 
