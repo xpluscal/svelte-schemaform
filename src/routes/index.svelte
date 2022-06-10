@@ -80,7 +80,7 @@
 <section class="bg-slate-100 dark:bg-slate-800 min-h-screen pb-20">
   <div class="pt-20 max-w-lg mx-auto">
     <h1 class="text-2xl font-bold dark:text-white text-black">Svelte-SchemaForm Demo</h1>
-    <p>
+    <p class="dark:text-white text-black">
       A simple, automatic form builder for svelte using arbitrary form data from a specified schema.
     </p>
 

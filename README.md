@@ -80,7 +80,7 @@ npm add svelte-schemaform
 
 ## Advanced Usage
 SchemaForm supports segmenting and a few other non-documented features.
-For more complex examples check the `/routes/index.svelte` file.
+For more complex examples check the `src/routes/index.svelte` file.
 
 ## Supported Field Types (schema slug)
 
