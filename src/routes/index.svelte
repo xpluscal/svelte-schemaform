@@ -1,6 +1,7 @@
 <script type="text/javascript">
   import SvelteSeo from "svelte-seo";
   import SchemaForm from '$lib/SchemaForm.svelte'
+  import { page } from '$app/stores';
 
   let schema = {
     "title": {
@@ -49,6 +50,27 @@
   }
 
 </script>
+
+<svelte:head>
+	<title>Svelte SchemaForm - Automatic Form Builder from JSON Schema</title>
+</svelte:head>
+
+<SvelteSeo
+  openGraph={{
+    title: "Svelte SchemaForm - Automatic Form Builder for Svelte",
+    description: "Build forms in svelte directly from JSON schema using a simple Svelte component.",
+    url: $page.url.href,
+    type: 'website',
+    images: [
+      {
+        url: $page.url.origin+"/images/seo-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Svelte SchemaForm - Automatic Form Builder for Svelte"
+      }
+     ]
+  }}
+/>
 
 <section class="bg-slate-100 dark:bg-slate-800 min-h-screen pb-20">
   <div class="pt-20 max-w-lg mx-auto">
