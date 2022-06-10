@@ -110,8 +110,7 @@ For more complex examples check the `/routes/index.svelte` file.
 
 - [ ] Form Validation
 - [ ] Custom Styling
-- [-] Image Upload via IPFS
-- [ ] Custom Styling
+- [ ] Image Upload via IPFS
 
 ## Contribution
 Feel free to suggest / PR. This grows best together.
