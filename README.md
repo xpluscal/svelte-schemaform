@@ -1,6 +1,6 @@
 # Svelte Schemaform
-Automatically create and update a form for arbitrary form data from a specified schema.
-A simple Svelte variant of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonschema-form]
+A simple, automatic form builder for svelte using arbitrary form data from a specified schema.
+Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/react-jsonschema-form]
 
 ## Why
 Building and maintaining tons of forms is a mess and error-prone. Having a schema/json based approach to generating forms speeds up that process tremendously.
@@ -69,6 +69,10 @@ npm install --
 | `formData`  | Data Object to be handled  | `{title: ""}`
 | `onSubmit`  | Callback function to be called when form is submitted.  | `onSubmit={(data) => doData(data)}`
 | `onChange`  | Callback function to be called when form data changes.  | `onChange={(data) => handleChange(data)}`
+
+## Additional Features
+
+- [x] Dark Mode
 
 ## ToDo
 

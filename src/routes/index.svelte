@@ -18,23 +18,43 @@
       "section": [0]
     },
     "object": {
-      "label" : "Object",
+      "label" : "Cat",
       "type" : "object",
       "layout": "grid",
-    }
+    },
+    "age": {
+      "label" : "Age",
+      "type" : "number"
+    },
+    "name": {
+      "label" : "Name",
+      "type" : "text"
+    },
+    "color": {
+      "label" : "Color",
+      "type" : "text"
+    },
   }
 
   let formData = {
     title: "",
     description: "",
-    list: ["Item A", "Item B"]
+    list: ["Item A", "Item B"],
+    object: {
+      age: 0,
+      name: "Lewn",
+      color: "Brown"
+    }
   }
 
 </script>
 
-<section class="bg-slate-100 dark:bg-slate-800 min-h-screen">
+<section class="bg-slate-100 dark:bg-slate-800 min-h-screen pb-20">
   <div class="pt-20 max-w-lg mx-auto">
-    <h1 class="text-2xl font-bold">Svelte-SchemaForm Demo</h1>
+    <h1 class="text-2xl font-bold dark:text-white text-black">Svelte-SchemaForm Demo</h1>
+    <p>
+      A simple, automatic form builder for svelte using arbitrary form data from a specified schema.
+    </p>
 
     <div class="mt-8">
       <SchemaForm
