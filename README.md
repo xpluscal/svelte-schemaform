@@ -6,8 +6,10 @@ Rewrite / Svelte port of (react-jsonschema-form)[https://github.com/rjsf-team/re
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Why](#why)
+- [Demo](#demo)
 - [Installation](#installation)
-- [Basic Example](#basic-example)
+- [Basic Usage](#basic-usage)
+- [Advanced Usage](#advanced-usage)
 - [Supported Field Types (schema slug)](#supported-field-types-schema-slug)
 - [Options](#options)
 - [Additional Features](#additional-features)
@@ -34,7 +36,7 @@ If you rely on Svelte SchemaForm, please consider supporting it.
 npm i svelte-schemaform
 ```
 
-## Basic Example
+## Basic Usage
 
 ```svelte
 <script>
