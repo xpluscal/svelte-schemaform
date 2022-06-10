@@ -8,7 +8,7 @@ Building and maintaining tons of forms is a mess and error-prone. Having a schem
 ## Installation
 
 ```
-npm install --
+npm i svelte-schemaform
 ```
 
 ## Basic Example
@@ -51,6 +51,8 @@ npm install --
   onChange={handleChange}
 />
 ```
+
+For more complex examples check the `/routes/index.svelte` file.
 
 ## Supported Field Types (schema slug)
 
