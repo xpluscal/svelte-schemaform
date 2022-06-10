@@ -1,5 +1,5 @@
 # Svelte SchemaForm
-A simple Svelte component capable of building HTML forms out of a JSON schema
+A simple Svelte component that automatically builds a Form UI from a JSON schema.
 Rewrite / Svelte port of [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
